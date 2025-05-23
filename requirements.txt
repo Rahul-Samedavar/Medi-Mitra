@@ -1,8 +1,0 @@
-groq
-matplotlib
-pillow
-
-numpy
-pandas
-scikit-learn
-tensorflow

@@ -1,7 +1,7 @@
 # Medi-Mitra
 
 ## Overview
-
+We have uploaded demo scripts of training and explainable AI part, you can see that the architecture we promise is possible and completely practicle.
 This project presents a scalable, intelligent medical imaging assistant powered by a **three-model pipeline** to support both **radiologists** and **patients**. It automates disease detection, generates explainable visual and textual diagnostics, and enables multilingual, source-grounded health consultations.
 
 ---
@@ -93,20 +93,3 @@ E --> F[Exportable Diagnostic Report]
 
 ---
 
-## 👥 Contributors
-
-* **Model Development:** AI/ML Engineers
-* **Frontend & Dashboard:** React Developers
-* **Backend & API Integration:** Full-stack Developers
-* **Medical Supervision & Data Annotation:** Clinical Advisors
-
----
-
-## 📫 Contact
-
-For demo access, collaborations, or technical queries:
-📧 [contact@medvision.ai](mailto:contact@medvision.ai)
-
----
-
-Let me know if you want this in `.md` file format or embedded into your GitHub repo.

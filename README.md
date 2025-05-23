@@ -47,7 +47,7 @@ Our architecture is structured into three synergistic components:
 ---
 
 # Flowchart
-![](Outputs\flow.png)
+![](Outputs/flow.png)
 
 
 ---

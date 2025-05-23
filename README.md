@@ -1,8 +1,12 @@
 # Medi-Mitra
 
+
+![](Outputs/gradcam.jpg)
+
 ## Overview
 We have uploaded demo scripts of training and explainable AI part, you can see that the architecture we promise is possible and completely practicle.
 This project presents a scalable, intelligent medical imaging assistant powered by a **three-model pipeline** to support both **radiologists** and **patients**. It automates disease detection, generates explainable visual and textual diagnostics, and enables multilingual, source-grounded health consultations.
+
 
 ---
 
@@ -16,6 +20,7 @@ Our architecture is structured into three synergistic components:
 * **Dataset:** NIH ChestX-ray14
 * **Function:** Classifies over **14 chest-related diseases**.
 * **Output:** Disease labels with confidence scores and Grad-Cam Overlay.
+* [Check the training notebook](./Training%20Scripts/Multiclass.ipynb)
 
 ### 2. **Vision-Language Model (LLaMA 4 Scout)**
 
@@ -27,32 +32,23 @@ Our architecture is structured into three synergistic components:
   * **Shape & size of anomalies**
   * **Visual marker reasoning**
 * **Explainability:** Integrated with **GradCAM, GradCAM++, and Layered Vision** for heatmap overlays.
+* [Check the Demo here](./Explanable%20AI/explain.ipynb)
 
 
-### 3. **BioGPT-Based Report Generator**
+### 3. **LLM-Based Report Generator**
 
-* **Model:** BioGPT (Fine-tuned LLM on biomedical texts)
-* **Input:** CNN predictions + visual cues + patient data
+* **Model:** Gemini / OpenAI LLMs.
+* **Input:** CNN predictions + Grad-Cam + patient data
 * **Function:** Generates:
 
   * Structured **clinical reports**
   * **Differential diagnosis**
   * Exportable, human-readable **medical summaries**
-
-
 ---
 
-## 🔁 Pipeline Flow
+# Flowchart
+![](Outputs\flow.png)
 
-```mermaid
-graph TD
-A[Input Scan (X-ray / CT / MRI)] --> B[CNN Disease Classification]
-B --> C[LLaMA 4 Scout]
-C --> D[Visual Explanation + Reasoning]
-B --> E[BioGPT]
-C --> E
-E --> F[Exportable Diagnostic Report]
-```
 
 ---
 
@@ -62,7 +58,7 @@ E --> F[Exportable Diagnostic Report]
 | --------------- | -------------------- |
 | ML Frameworks   | PyTorch / TensorFlow |
 | Vision-Language | LLaMA 4 Scout        |
-| Language Model  | BioGPT               |
+| Language Model  | Gemini/OpenAI        |
 | Dataset         | NIH ChestX-ray14     |
 | Frontend        | React.js             |
 | Backend         | Flask                |
@@ -81,15 +77,6 @@ E --> F[Exportable Diagnostic Report]
 * 🌐 **Multilingual disease archive**
 * 📊 **Radiologist dashboard** for triage and stats
 * 🔄 **Self-improving pipeline** using real-time feedback
-
----
-
-## 📈 Use Cases
-
-* Triage automation for overworked radiologists
-* Diagnostic aid in low-resource healthcare settings
-* Patient-facing second opinion tool
-* Educational resource for medical students and interns
 
 ---
 
